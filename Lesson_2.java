@@ -85,27 +85,27 @@ public class HW {
 // checkBalance([1, 1, 1, || 2, 1]) → true,
 // граница показана символами ||, эти символы в массив не входят.
 
-    static boolean checkTrue(int[] arr) {
-        int leftSum = 0, rightSum = 0;
+     static boolean checkTrue(int[] arr) {
+            if (arr == null || arr.length < 2)
+                return false;
 
-        for (int i = 0; i < arr.length + 1; i++) {
-            leftSum = 0;
-            rightSum = 0;
+            int rightSum = 0, sumLeft = 0;
 
-            for (int j = 0; j < i; j++) {
-                leftSum += arr[j];
-            }
+            for (int i : arr)
+                rightSum += i;
 
-            for (int j = i; j < arr.length; j++) {
-                rightSum += arr[j];
-            }
+            if ((rightSum == 0) && (rightSum % 2 != 0))
+                return false;
 
-            if (((leftSum != 0) && (rightSum  != 0)) && (leftSum == rightSum))
+            for (int i = 0; i < arr.length - 1; i++) {
+                sumLeft += arr[i];
+
+            if (sumLeft*2 == rightSum)
+
                 return true;
+            }
 
-        }
-        return false;
-    }
+            return false;
 
 //7. **** Написать метод, которому на вход подается одномерный массив и число n (может быть положительным,
 // или отрицательным), при этом метод должен сместить все элементымассива на n позиций. Для усложнения задачи нельзя
