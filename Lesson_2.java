@@ -102,7 +102,9 @@ public class HW {
                 rightSum += arr[j];
             }
 
-            if (leftSum == rightSum) return true;
+            if (((leftSum > 0) && (rightSum  > 0)) && (leftSum == rightSum))
+                return true;
+
         }
         return false;
     }
