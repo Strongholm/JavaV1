@@ -46,26 +46,24 @@ public class HW {
 //4. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое), и с помощью цикла(-ов)
 // заполнить его диагональные элементы единицами;
 
-// Задание закоммичено по причине поиска упрощенной версии, но из-за работы, могу не успеть во время сдать дз(((
+    static void create2D() {
+        int length = 5;
 
-//    static void create2D() {
-//        int length = 5;
-//
-//        int[][] arr = new int[length][length];
-//        for (int i = 0; i < length; i++) {
-//            for (int j = 0; j < length; j++) {
-//                if ((i == j) || (i == length - 1 - j)) {
-//                    arr[i][j] = 1;
-//                }
-//            }
-//        }
-//        for (int i = 0; i < length; i++) {
-//            for (int j = 0; j < length; j++) {
-//                System.out.print(arr[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-//    }
+        int[][] arr = new int[length][length];
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
+                if ((i == j) || (i == length - 1 - j)) {
+                    arr[i][j] = 1;
+                }
+            }
+        }
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
 //5. ** Задать одномерный массив и найти в нем минимальный и максимальный элементы (без помощи интернета);
 
@@ -102,7 +100,9 @@ public class HW {
                 rightSum += arr[j];
             }
 
-            if (leftSum == rightSum) return true;
+            if (((leftSum != 0) && (rightSum  != 0)) && (leftSum == rightSum))
+                return true;
+
         }
         return false;
     }
