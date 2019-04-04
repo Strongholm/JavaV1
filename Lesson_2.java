@@ -94,7 +94,7 @@ public class HW {
             for (int i : arr)
                 rightSum += i;
 
-            if ((rightSum == 0) && (rightSum % 2 != 0))
+            if rightSum % 2 != 0
                 return false;
 
             for (int i = 0; i < arr.length - 1; i++) {
