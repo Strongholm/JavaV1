@@ -22,7 +22,7 @@ import java.util.Random;
 
             do {
                 Random r = new Random();
-                int x = r.nextInt(9);
+                int x = r.nextInt(10);
                 int f;
                 System.out.println("Загадайте число! От 0 до 9");
 
@@ -81,7 +81,7 @@ public class Homework_3 {
                 "avocado", "broccoli", "carrot", "cherry", "garlic", "grape",
                 "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive",
                 "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin",
-                "potato"};
+                "potato","0"};
         String guess = getRandomWord(words);
         String maskedGuess = maskWord(guess);
         System.out.println("Угадайте слово!");
