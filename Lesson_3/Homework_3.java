@@ -76,13 +76,14 @@ import java.util.Random;
 //    Используем только маленькие буквы
 
 public class Homework_3 {
+    static Random random = new Random();
     public static void main(String[] args) throws IOException {
         String[] words = {"apple", "orange", "lemon", "banana", "apricot",
                 "avocado", "broccoli", "carrot", "cherry", "garlic", "grape",
                 "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive",
                 "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin",
                 "potato","0"};
-        String guess = getRandomWord(words);
+        String guess = words[random.nextInt(words.length)];
         String maskedGuess = maskWord(guess);
         System.out.println("Угадайте слово!");
 
